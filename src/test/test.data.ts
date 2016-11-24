@@ -65,3 +65,9 @@ export let productData = [
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
     }
 ]
+export let Contacts=[
+    {
+        "user":"tamti",
+        "pass":"tambaba"
+    }
+]

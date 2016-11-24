@@ -1,0 +1,9 @@
+<form class="form form-horizontal">
+    <label class="label label-control">username:</label>
+    <input class="form-control" type="text" [(ngModel)]="_contact.user" name="user"/>
+    <label class="label label-control" >Password:</label>
+    <input type="text" name="pass" [(ngModel)]="_contact.pass" class="form-control"/>
+    <button (click)="CheckLogin(_contact.user,_contact.pass)">click</button>
+</form>
+<button (click)="ShowForget()">Forget Password</button>
+<input type="email" *ngIf="show"/>

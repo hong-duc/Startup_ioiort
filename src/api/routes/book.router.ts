@@ -6,33 +6,20 @@ import path = require('path');
 import { BookRepo } from '../repositories/book.repo';
 
 let mockProduct = require(path.join(__dirname,'..','json','products.json'));
-
-
-
-
 export class BookRouter {
-
     private router: Router;
     private bookRepo: BookRepo;
-
     constructor() {
         this.router = Router();
         this.bookRepo = new BookRepo();
-
-        //this.model = model;
     }
-
-
     public getRouter(): Router {
 
         this.router.route('/book')
             .get(this.getAllBook)
             .post(this.createABook)
-            .delete(this.deleteABook);
-        
+            .delete(this.deleteABook);     
         this.router.get('/countBook',this.countBook)
-
-
         return this.router;
     }
 
@@ -75,7 +62,7 @@ export class BookRouter {
 
 
 
-// cấu hình router với url mình muốn (ở đây là /book => localhost:port/api/book)
+// cấu hình router với url mình muốn (ở đây là /book => localhost:port/api/book/)
 // router.route('/book')
 //     //lay het sach, hoac lay sach theo id
 //     .get(getAllBook)

@@ -9,12 +9,12 @@ import { WelcomeComponent } from './home/welcome.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 
 const appRoutes: Route[] = [
+    { path: 'welcome', component: WelcomeComponent },
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
     { path: 'book-list', component: BookListComponent },
     { path: 'book-detail', component: BookDetailComponent },
-    { path: 'welcome', component: WelcomeComponent },
     { path: 'products', component: ProductListComponent },
     { path: 'product/:id', component: ProductDetailComponent}
 ]
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+export const routing: ModuleWithProviders = RouterModule.forChild(appRoutes);
