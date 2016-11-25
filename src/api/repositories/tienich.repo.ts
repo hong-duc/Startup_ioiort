@@ -8,13 +8,13 @@ export class TienIchRepo extends RepoBase {
         super();
     }
 
-    public getList(option): Promise<TienIch[]> {
+    public getList(id): Promise<TienIch[]> {
         let queryText = 'SELECT * FROM public."ioh_TienIch" ORDER BY "TienIchID" ASC ';
         console.info('Excute: ' + queryText);
         let pResult;
 
-        if (option) {
-            pResult = this._pgPool.query(queryText, [option.id, option.name])
+        if (id) {
+            pResult = this._pgPool.query(queryText + 'WHERE "TienIchID"=$1', [id])
         } else {
             pResult = this._pgPool.query(queryText)
         }
@@ -34,7 +34,7 @@ export class TienIchRepo extends RepoBase {
         })
             .catch(err => {
                 console.error(err.message);
-                return null;
+                return Promise.reject(err);
             });
     }
 

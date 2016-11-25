@@ -1,12 +1,4 @@
 
-export let TienIch = [
-    {
-        id:1,
-        KyHieu:'askmd',
-        TenGoi:'asdl',
-        BieuTuong: 'asldmla',
-    },
-]
 
 export let bookData = [
     {

@@ -42,8 +42,9 @@ export class TienIchRouter {
         //res.status(200).json(mockProduct);
 
         // let object={ id: 1, name: 'book1' };
+        let id = reqs.query.id || null;
 
-        this.tienichRepo.getList(null)
+        this.tienichRepo.getList(id || null)
             .then(result => {
                 res.status(200).json(result)
             })
@@ -74,6 +75,6 @@ export class TienIchRouter {
         })
     }
 
-
+}
 
 
