@@ -11,5 +11,10 @@ before_script:
 - npm run create-mock-data
 after_script:
 - npm run drop-all
+branches:
+  only:
+  - HuuVinh-f-Angular2
+  - DucThanh-Angular2
+  - nha-f-notifi
 notifications:
   slack: nodejsapisecurity:sz840dPqzq2zgUnjlkSA9BRe
