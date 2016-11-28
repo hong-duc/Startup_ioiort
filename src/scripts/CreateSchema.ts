@@ -5,7 +5,7 @@ let env = process.env.NODE_ENV || 'development';
 let config = require(path.join(__dirname,'..','config','database.config.json'))[env];
 
 
-var connectString = ('postgres://' + config.username + ':' + config.password + '@' + config.host + '/postgres');
+var connectString = ('postgres://' + config.username + ':' + config.password + '@' + config.host + config.database);
 pg.connect(connectString, (err,client,done) => {
     if(err){
         console.error(err.message)
